@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courgette', cursive;
+
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+.header{
+/*    border-bottom: 4px solid #f15025;*/
+    transition: margin .9s ease-in-out;
+ 
+}
+.nav{
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    background: #f15025;
+    
+}
+
+
+.img-logo{
+    font-size: 50px;
+    width: 50px
+
+}
+.img-logo i{
+    padding: 20px;
+}
+
+
+
+/*dasd*/
+.icon-logo {
+  align-self: center;
+
+  cursor: pointer;
+}
+
+.icon-logo1,
+.icon-logo2,
+.icon-logo3 {
+      width: 30px;
+      height: 4px;
+      margin: 6px 5px;
+      background: #272727;
+      transition: transform 3s ease, opacity 3s ease;
+
+}
+
+
+
+/*as*/
+.nav-ul{
+    list-style-type: none;
+    background: #cec9ce;
+    height: 0;
+    overflow: hidden;
+    transition: height 2s ease-in-out;
+}
+
+.shooo{
+    height: 380px;
+}
+.nav-ul li:first-of-type{
+    padding: 20px;
+    font-size: 30px;
+}
+.nav-ul li{
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer
+}
+.nav-ul li span{
+    margin-right: 15px;
+    
+}
+.nav-ul li span i{
+    color: #f15025;
+}
+.nav-ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color:  #272727;  
+    transition: background 2s ease, padding 2s ease;
+}
+.nav-ul li:hover{
+      background: rgba(0, 0, 0, 0.5);
+}
+.nav-ul li:hover a{
+    padding-left: 30px
+}
+/*%%%%%%%*/
+
+
+#header-top{
+    height: 107px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 5px solid #f15025;
+}
+.nav-logo{
+    border: 3px solid #272727;
+    height: 42px;
+    cursor: pointer;
+    display: none
+}
+.icon-dir a{
+    font-size: 30px;margin: 10px;
+}
+#header-top img{
+    widows: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-self: center
+}
+.nav-img{
+    display: flex
+}
+.nav-img h3{
+    font-size: 30px;
+    align-self: center;
+    color: #272727
+}
+#header-top input{
+    padding: 10px;
+    border: 2px solid #a1a2a1;
+}
+#header-top input:placeholder {
+    font-size: 25px; 
+}
+#header-top a{
+    color: #f15025;
+}
+.sign-out{
+    font-size: 30px;
+}
+
+/*responsive*/
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+main{
+    flex: 1 0 auto;
+    background: #f5f3f5;
+}
+@media screen and (min-width:776px){
+    .nav-ul{
+        height: 406px;
+        display: block;
+    }
+    .icon-logo{
+        display: none;
+    }
+    body{
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh
+    }
+    .nav-logo{
+        display: block;
+    }
+    #nav{
+        flex: 0 0 20%;
+        min-height: 100vh;
+        background: #cec9ce;
+    }
+    main{
+        flex: 0 0 80%;
+        display: flex;
+        flex-direction: column;
+        max-width: 80vw!important;
+    }
+    .nav{
+        justify-content: center;
+    }
+    .let{
+        margin-left: -20%;
+    }
+}
+
+
+
+/*############*/
+
+#song{
+    padding: 20px;
+}
+
+#song .song-item {
+      margin: 20px 0px;
+      display: flex;
+}
+
+#song .song-item img {
+  width: 150px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+#song .list-item-icon span {
+  color: #F3C05A;
+}
+
+
+
+@media screen and (min-width:576px){
+  .song-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+  }
+}
+
+/*#################3*/
+
+
+.songs{
+    padding: 40px 0;
+}
+.songs h1 {
+      text-transform: uppercase;
+      margin: 0 0 20px 20px
+}
+
+.song {
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+}
+
+.song h4 {
+      margin-bottom: 10px;
+      color: #8e8e8e;
+}
+.song-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 10px;
+} 
+.song-icon {
+      font-size: 30px;
+      padding: 10px;
+      display: inline-block;
+      color: #f15025;
+      border: 2px solid #f15025;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 2s ease, color 2s ease, border 2s ease, opacity 2s ease;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+}
+.song-icon:hover {
+      color: #fff;
+      border-color: #f15025;
+      background: #f15025;
+}
+.song-container:hover .song-icon {
+      opacity: 1;
+}
+
+.song img {
+  display: block;
+  width: 100%;
+  transition: opacity 2s ease, transform 2s ease;
+
+}
+
+.song img:hover {
+  opacity: 0.7;
+  transform: scale(1.2)
+}
+
+
+
+
+.hei{
+    max-width: 100vw!important;
+    padding: 0 20px;
+}
